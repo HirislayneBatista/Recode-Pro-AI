@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/Modulo 2/CSS/style.css">
+    </head>
+    
+    <body class="corpo-home" >
+        <!-- banner da pagina -->
+        <p id="imagem-menu"> <img src="/Modulo 2/HTML/img/banner.png" alt="banner"></p> <!-- alt eh a descricao da img -->
+
+        <!-- menu -->
+        <p class="menu">
+            <a href="pagina01.html">Página 1 |</a>
+            <a href="pagina02.html">Página 2 |</a>
+            <a href="pagina03.html">Página 3 |</a>
+            <a href="pagina04.html">Página 4</a>
+        </p>
+
+        <!-- tabela 1 -->
+        <table border="1" bordercolor="green" width="40%" align="center">
+            <tr> 
+                <td rowspan="2" align="center">Col1</td>
+                <td rowspan="2" align="center">Col2</td>
+                <td rowspan="2"align="center">Col3</td> 
+                <td colspan="3" align="center">Coluna</td>
+            </tr>
+            <td>Col4</td>
+            <td>Col5</td>
+            <td>Col6</td>
+        </table>
+        <br>
+
+        <!-- tabela 2 -->
+        <table id="tabela"> 
+            <tr> 
+                <td colspan="2">Linha 1 Celula 1</td>
+                <td rowspan="2" colspan="2">Linha 1 Celula 3</td>
+            </tr>
+            <tr>
+                <td>Linha 2 Celula 1</td>
+                <td>Linha 2 Celula 2</td>
+            </tr>
+            <tr>
+                <td>Linha 3 Celula 1</td>
+                <td>Linha 3 Celula 2</td>
+                <td>Linha 3 Celula 3</td>
+            </tr>
+        </table>
+
+        <!-- formulario -->
+        <h1>Atendimento</h1>
+        <p>Entre em contato preenchendo o formulário. Teremos o maior em atender ao seu contato.</p>
+        <table id="tabela-formulario" >
+            <form >
+                <tr>
+                    <td colspan="2">
+                        <input type="radio" name="pessoa" value="f"/>Pessoa Física
+                        <input type="radio" name="pessoa" value="f"/>Pessoa Física
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="cpf">CPF/CNPJ:</label></td>
+                    <td><input type="name" name="cpf" size="50"/></td>
+                </tr>
+
+                <tr>
+                    <td><label>Nome:</label></td>
+                    <td><input type="text" name="nome" size="50"/></td>
+                </tr>
+
+                <tr>
+                    <td><label>E-mail:</label></td>
+                    <td><input type="email" name="email" size="50"/></td>
+                </tr>
+
+                <tr>
+                    <td><label>Telefone:</label></td>
+                    <td><input type="tel" name="telefone" size="50"/></td>
+                </tr>
+
+                <tr>
+                    <td><label>Cidade:</label></td>
+                    <td><input type="text" name="cidade" size="50"/></td>
+                </tr>
+
+                <tr>
+                    <td><label>Assunto:</label></td>
+                    <td>
+                        <select name="assunto">
+                            <option>Selecione</option>
+                            <option>Opcao 1</option>
+                            <option>Opcao 2</option>
+                            <option>Opcao 3</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Mensagem:</label></td>
+                    <td><textarea name="msg" cols="50 " rows="6"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Enviar"/></td>
+                </tr>
+            </form>
+        </table>
+    </body>
+</html>

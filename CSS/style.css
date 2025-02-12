@@ -1,0 +1,63 @@
+.corpo-home {
+	background-color: silver;
+}
+
+.corpo-pagina1 {
+	background-color: yellowgreen;
+}
+
+.corpo-pagina2 {
+	background-color: pink;
+}
+
+.corpo-pagina3 {
+	background-color: blueviolet;
+}
+
+.corpo-pagina4 {
+	background-color: yellow;
+}
+
+.menu {
+	text-align: center;
+}
+
+.titulo {
+	text-align: center;
+}
+
+#imagem-menu {
+	text-align: center;
+}
+
+p {
+	color: palevioletred;
+	font-size: 20px;
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+}
+
+#tabela {
+	/* border: 1px;
+	width: 40%;
+	align-items: center; */
+	border: 3px solid black; /* Define a borda */
+    width: 40%; /* Define a largura */
+    margin: auto; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto */
+
+}
+
+#tabela-formulario {
+	margin: auto;
+	border: 0;
+	border-collapse: collapse; /* Remove espaços entre as células */
+
+}
+
+td label {
+	text-align: right;
+}
