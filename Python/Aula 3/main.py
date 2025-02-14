@@ -3,16 +3,16 @@ import cliente
 import servicos
 
 while True:
-    print("\n🐶 PETSHOP MANAGER - MENU PRINCIPAL 🐾")
+    print("\nPETSHOP MANAGER - MENU PRINCIPAL")
     print("1 - Cadastrar Pet")
     print("2 - Listar Pets")
     print("3 - Cadastrar Cliente")
     print("4 - Listar Clientes")
-    print("5 - Agendar Serviço")
-    print("6 - Listar Serviços")
+    print("5 - Agendar Servico")
+    print("6 - Listar Servicos")
     print("7 - Sair")
 
-    opcao = input("Escolha uma opção: ")
+    opcao = input("\nEscolha uma opcao: ")
 
     if opcao == "1":
         pets.cadastrar_pet()
@@ -27,7 +27,7 @@ while True:
     elif opcao == "6":
         servicos.listar_servicos()
     elif opcao == "7":
-        print("👋 Saindo do sistema...")
+        print("Saindo do sistema...")
         break
     else:
-        print("❌ Opção inválida! Tente novamente.")
+        print("Opção inválida! Tente novamente.")

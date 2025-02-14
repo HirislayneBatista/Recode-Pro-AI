@@ -1,26 +1,24 @@
 def cadastrar_cliente():
     print("\nCADASTRO DE CLIENTE:")
     nome = input("\nNome do cliente: ")
-    telefone = input("\nTelefone: ")
-    pet = input("\nNome do pet: ")
+    telefone = input("Telefone: ")
+    pet = input("Nome do pet: ")
     
-    # salva no arquivo
-    with open("cliente.txt", "a") as arquivo:
-        arquivo.write(f"{nome},{telefone},{pet}\n")
-    
-    # clientes.append({"nome": nome, "telefone": telefone, "pet": pet})
+    # Salva no arquivo
+    with open("clientes.txt", "a") as arquivo:
+        arquivo.write(f"{nome}, {telefone}, {pet}\n")
     
     print(f"\n Cliente {nome} cadastrado com sucesso!")
 
 def listar_clientes():
     print("\nLISTA DE CLIENTES:")
-    # for cliente in clientes:
-    #     print(f" Nome: {cliente['nome']} | Telefone: {cliente['telefone']} | Pet: {cliente['pet']}")
     
-    with open("cliente.txt", "r") as arquivo:
+    # Ler o arquivo
+    with open("clientes.txt", "r") as arquivo:
         clientes = arquivo.readlines()
         for cliente in clientes:
-            nome, telefone, pet = cliente.strip().split(",")
-            print(f"\nNome Cliente: {nome}, Telefone: {telefone}, Nome do Pet: {pet}")
+            nome, telefone, pet = cliente.strip().split(", ")
+            print(f"\nNome Cliente: {nome} | Telefone: {telefone} | Nome do Pet: {pet}")
 
+# cadastrar_cliente()
 # listar_clientes()
