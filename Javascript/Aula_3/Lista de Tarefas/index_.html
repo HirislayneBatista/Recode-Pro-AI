@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 30px;
+        }
+        #listaTarefas {
+            list-style: none;
+            padding: 0;
+        }
+        .tarefa {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f4f4f4;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        .concluida {
+            text-decoration: line-through;
+            color: gray;
+        }
+        button {
+            margin-left: 5px;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn-concluir {
+            background-color: green;
+            color: white;
+        }
+        .btn-excluir {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-4">
+    <h2 class="text-center">Lista de Tarefas</h2>
+
+    <div class="input-group mb-3">
+        <input type="text" id="inputTarefa" class="form-control" placeholder="Adicione a tarefa">
+        <button class="btn btn-primary" onclick="adicionarTarefa()">Adicionar tarefa</button>
+    </div>
+
+    <table class="table table-striped">
+        <tbody id="listaTarefas"></tbody>
+    </table>
+</div>
+
+<script>
+    function adicionarTarefa() {
+        let input = document.getElementById("inputTarefa");
+        let textoTarefa = input.value.trim();
+
+        if (textoTarefa === "") {
+            alert("Por favor, digite uma tarefa!");
+            return;
+        }
+
+        let lista = document.getElementById("listaTarefas");
+
+        // Criando uma nova linha da tabela
+        let linha = document.createElement("tr");
+
+        // Criando a célula da tarefa
+        let celulaTarefa = document.createElement("td");
+        celulaTarefa.textContent = textoTarefa;
+
+        // Criando a célula dos botões
+        let celulaBotoes = document.createElement("td");
+        celulaBotoes.classList.add("text-end");
+
+        // Criando botão "Feito"
+        let botaoFeito = document.createElement("button");
+        botaoFeito.textContent = "Feito";
+        botaoFeito.classList.add("btn", "btn-feito", "me-2");
+        botaoFeito.onclick = function () {
+            celulaTarefa.classList.toggle("tarefa-concluida");
+        };
+
+        // Criando botão "Remover"
+        let botaoRemover = document.createElement("button");
+        botaoRemover.textContent = "Remover";
+        botaoRemover.classList.add("btn", "btn-remover");
+        botaoRemover.onclick = function () {
+            lista.removeChild(linha);
+        };
+
+        // Adicionando os botões à célula
+        celulaBotoes.appendChild(botaoFeito);
+        celulaBotoes.appendChild(botaoRemover);
+
+        // Adicionando as células à linha
+        linha.appendChild(celulaTarefa);
+        linha.appendChild(celulaBotoes);
+
+        // Adicionando a linha à tabela
+        lista.appendChild(linha);
+
+        // Limpando o campo de input
+        input.value = "";
+    }
+</script>
+
+</body>
+</html>

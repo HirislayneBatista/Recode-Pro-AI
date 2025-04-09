@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            background: #fff;
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            align-items: center;
+            padding: 10px;
+            background-color: purple;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            margin-top: 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #803080;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form>
+            <h2>Formulário</h2>
+            <label for="campo1">Campo 1:</label>
+            <input type="number" id="campo1" name="campo1" required>
+           
+            <label for="campo2">Campo 2:</label>
+            <input type="number" id="campo2" name="campo2" required>
+           
+            <label for="campo3">Campo 3:</label>
+            <input type="text" id="resultado" name="campo3" disabled>
+           
+            <button type="button" onclick="mostrar()">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        function mostrar(){
+            let c1 = Number(document.getElementById("campo1").value);
+            let c2 = Number(document.getElementById("campo2").value);
+            let soma = c1 + c2;
+        
+            document.getElementById('resultado').value = soma;
+        }
+
+        function calcular(){
+            let c1 = Number(document.getElementById("campo1").value);
+            let c2 = Number(document.getElementById("campo2").value);
+            let soma = c1 + c2;
+        
+            document.getElementById('resultado').value = soma;
+        }
+        document.getElementById("campo2").addEventListener('blur', calcular);
+
+        
+    </script>
+
+</body>
+</html>

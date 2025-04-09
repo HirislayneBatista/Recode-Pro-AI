@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folha de Pagamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Folha de Pagamento</h2>
+        <form id="formFolha">
+            <label for="nome">Nome do Funcionário:</label>
+            <input type="text" id="nome" required>
+
+            <label for="salarioBase">Salário Base (R$):</label>
+            <input type="number" id="salarioBase" required>
+
+            <label for="inss">Desconto INSS (R$):</label>
+            <input type="number" id="inss" required>
+
+            <label for="ir">Desconto IR (R$):</label>
+            <input type="number" id="ir" required>
+
+            <label for="outros">Outros Descontos (R$):</label>
+            <input type="number" id="outros" required>
+
+            <button type="button">Calcular</button>
+        </form>
+
+        <div class="resultado">
+            <h3>Resumo</h3>
+            <p><strong>Nome:</strong> <span id="resNome"></span></p>
+            <p><strong>Salário Líquido:</strong> R$ <span id="salarioLiquido"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
