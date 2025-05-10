@@ -1,0 +1,114 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container principal */
+.container {
+    width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilização do input e botão */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-group button {
+    padding: 10px 15px;
+    border: none;
+    background: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-group button:hover {
+    background: #218838;
+}
+
+/* Lista de contatos */
+#listaContatos {
+    list-style: none;
+}
+
+#listaContatos li {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#listaContatos li span {
+    flex: 1;
+}
+
+/* Botões */
+button {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+/* Botão editar */
+button.editar {
+    background: #007bff;
+    color: white;
+}
+
+button.editar:hover {
+    background: #0056b3;
+}
+
+/* Botão salvar */
+button.salvar {
+    background: #ffc107;
+    color: black;
+}
+
+button.salvar:hover {
+    background: #e0a800;
+}
+
+/* Botão excluir */
+button.excluir {
+    background: #dc3545;
+    color: white;
+}
+
+button.excluir:hover {
+    background: #c82333;
+}
+
+/* Inputs de edição */
+input[type="text"].editando {
+    border: 2px solid #007bff;
+    background: #eef5ff;
+}
